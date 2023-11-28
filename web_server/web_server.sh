@@ -20,7 +20,8 @@ sudo apt install -y apache2 \
                  php-mbstring \
                  php-mysql \
                  php-xml \
-                 php-zip
+                 php-zip \
+                 ruby-full
 
 sudo mkdir -p /srv/www
 sudo chown www-data: /srv/www
@@ -102,6 +103,10 @@ sudo python3 keys.py
 
 echo -e "HostKeyAlgorithms=ssh-rsa\nPubkeyAcceptedAlgorithms=+ssh-rsa" | sudo tee -a /etc/ssh/sshd_config
 sudo systemctl restart sshd
+
+wget https://aws-codedeploy-us-east-2.s3.us-east-2.amazonaws.com/latest/install
+chmod +x ./install
+sudo ./install auto
 
 wget https://repo.zabbix.com/zabbix/6.2/ubuntu/pool/main/z/zabbix-release/zabbix-release_6.2-2%2Bubuntu22.04_all.deb
 sudo dpkg -i zabbix-release_6.2-2+ubuntu22.04_all.deb
