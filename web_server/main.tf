@@ -55,6 +55,8 @@ resource "aws_instance" "web_server" {
 
   associate_public_ip_address = true 
 
+  iam_instance_profile = var.ec2_iam_instance_profile
+
   private_ip = var.web_server_private_ip
 
   user_data = <<-EOF

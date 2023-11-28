@@ -33,6 +33,7 @@ module "web_server" {
     guacamole_private_ip = var.guacamole_private_ip
     web_server_private_ip = var.web_server_private_ip
     environment_key = module.guacamole.environment_key_name
+    ec2_iam_instance_profile = module.role_ec2.iam_profile
 }
 
 module "zabbix" {
@@ -44,4 +45,23 @@ module "zabbix" {
     web_server_private_ip = var.web_server_private_ip
     zabbix_private_ip = var.zabbix_private_ip
     environment_key = module.guacamole.environment_key_name
+}
+
+module "cicd" {
+    source = "./cicd"
+    application_name = module.web_server.instance_name
+    codedeploy_arn = module.role_codedeploy.codedeploy_arn
+    cicd_arn = module.role_pipeline.pipeline_arn
+}
+
+module "role_ec2" {
+    source = "./role_ec2"
+}
+
+module "role_codedeploy" {
+    source = "./role_codedeploy"
+}
+
+module "role_pipeline" {
+    source = "./role_pipeline"
 }

@@ -34,3 +34,8 @@ override.tf.json
 terraform.rc
 
 *.pem
+
+# Ignore .terraform folder and files
+.terraform
+.terraform/*
+.terraform.*

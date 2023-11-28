@@ -26,3 +26,7 @@ variable "guacamole_private_ip" {
 variable "environment_key" {
     type = string
 }
+
+variable "ec2_iam_instance_profile" {
+    type = string
+}
