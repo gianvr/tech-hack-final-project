@@ -9,3 +9,9 @@ variable "codedeploy_arn" {
 variable "cicd_arn" {
   type = string
 }
+
+// Testing Enviroment Variable
+
+variable "testing_application_name" {
+  type = string
+}

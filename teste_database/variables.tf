@@ -1,0 +1,33 @@
+variable "guacamole_network_interface_id" {
+    description = "The ID of the guacamole instance"
+    type = string
+}
+
+variable "vpc_id" {
+    description = "The ID of the VPC"
+    type = string
+}
+
+variable "zabbix_private_ip" {
+    type = string
+}
+
+variable "guacamole_private_ip" {
+    type = string
+}
+
+variable "web_server_private_ip" {
+    type = string
+}
+
+variable "database_private_ip" {
+    type = string
+}
+
+variable "environment_key" {
+    type = string
+}
+
+variable "guacamole_instance_id" {
+    type = string
+}
