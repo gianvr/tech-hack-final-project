@@ -5,7 +5,7 @@
  - Tiago Vitorino Seixas
 
 ## Diagrama da Arquitetura: 
- - [Diagrama da arquitetura](/img/tech_hack.svg)
+ - ![Diagrama da arquitetura](/img/tech_hack.svg)
 
 ## Pré-requisitos
  - Chave de Acesso 
