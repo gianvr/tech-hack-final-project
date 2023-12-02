@@ -91,7 +91,9 @@ http://X.X.X.X/zabbix
 
   - Para configurar o IP, selecione Add > Zabbix Agent, e o grupo pode ser qualquer um (não interfere em nada, mas é obrigatório)
 
-  - Por fim, basta selecionar o template, clicando no botão Select > Template/Operating Systems > Linux by Zabbix Agent
+  - Por fim, basta selecionar os templates:
+   - Primeiro clicando no botão Select > Template/Operating Systems > Linux by Zabbix Agent
+   - E depois de selecionar o template do OS selecionar os outros templates como o do database
 
   - Repita esse processo para as 3 instâncias
 
